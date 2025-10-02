@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App </title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light-pink-bg">
+
+    
+    <div class="counter-container">
+
+        <button id="increment-btn" class="arrow-button" aria-label="increment-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+        </button>
+
+        <!-- Counter Display Box -->
+        <div id="counter-display" class="counter-box counter-glow">
+            <!-- Counter Value -->
+            <span id="counter-value" class="counter-value">0</span>
+        </div>
+
+        <!-- Down Arrow Button -->
+        <button id="decrement-btn" class="arrow-button" aria-label="decrement-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+        </button>
+        
+        <!-- Reset Button (New) -->
+        <button id="reset-btn">Reset</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

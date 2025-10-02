@@ -1,0 +1,125 @@
+        :root {
+            --primary-pink: #FF6B6B; 
+            --light-pink-bg: #FFF5F5;
+            --shadow-color: rgba(255, 107, 107, 0.4);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
+        
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-pink-bg); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .counter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            /* border: 1px solid black;  */
+        }
+
+        /* 2. Counter Display Box Styling */
+        .counter-box {
+            background-color: var(--primary-pink); 
+            color: white; 
+            width: 7rem;
+            height: 7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid red;
+        }
+
+        .counter-glow {
+            filter: drop-shadow(0 15px 30px var(--shadow-color));
+        }
+        
+        .counter-value {
+            font-size: 3.75rem; 
+            font-weight: 900;
+        }
+
+        .arrow-button {
+            color: var(--primary-pink);
+            opacity: 0.5;
+            cursor: pointer;
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0; 
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        
+        #increment-btn {
+            margin-bottom: 1rem; 
+        }
+
+        #decrement-btn {
+            margin-top: 1rem; 
+        }
+
+        .arrow-button svg {
+            width: 3rem; 
+            height: 3rem;
+        }
+        
+        .arrow-button:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        #reset-btn {
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 4rem; 
+            height: 4rem;
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(255, 107, 107, 0.5);
+            margin-top: 2rem;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        
+        #reset-btn:hover {
+            background-color: #E05C5C; 
+            transform: scale(1.05);
+        }
+
+
+        /* Media Query for larger screens */
+        @media (max-width: 768px) {
+            .counter-box {
+                width: 8rem; 
+                height: 8rem; 
+                border-radius: 1.5rem; 
+            }
+
+            .counter-value {
+                font-size: 4.5rem; 
+            }
+
+            .arrow-button svg {
+                width: 3rem; 
+                height: 3rem;
+            }
+            #reset-btn {
+            width: 3rem; 
+            height: 3rem;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+        }
